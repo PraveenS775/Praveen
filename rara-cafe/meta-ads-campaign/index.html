@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="rara-brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RaRa Cafe · Meta Brand Awareness Campaign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="assets/themes/rara-brand.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<style>
+/* ============================================================
+   RARA CAFE — Meta Brand Awareness Campaign deck
+   Same "warm editorial menu-card" system as the master plan deck.
+   ============================================================ */
+:root{
+  --paper:#fbf4e9;--paper-deep:#f3e8d6;--ink:#2e1b12;--ink-soft:#5b4232;--ink-faint:#9c8268;
+  --espresso:#3c2415;--espresso-2:#6b3f23;--caramel:#b9803f;--caramel-light:#dcae6e;
+  --rule:rgba(46,27,18,.16);--rule-strong:rgba(46,27,18,.32);
+  --display:'Fraunces','Playfair Display','Noto Sans',Georgia,serif;
+  --serif-body:'Cormorant Garamond','Noto Sans','Noto Serif SC',Georgia,serif;
+  --label:'Jost','Noto Sans','Inter',sans-serif;
+}
+html,body{background:var(--paper)}
+body{position:relative;font-family:var(--serif-body);color:var(--ink-soft)}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(ellipse 140% 90% at 50% -10%, rgba(185,128,63,.10), transparent 60%),
+    radial-gradient(ellipse 120% 80% at 100% 110%, rgba(60,36,21,.08), transparent 55%);}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");}
+.deck{background:transparent;position:relative;z-index:1}
+.ring-deco{position:absolute;border-radius:50%;border:1.5px solid var(--caramel);opacity:.14;pointer-events:none;z-index:0}
+.kicker{font-family:var(--label);font-size:12px;font-weight:500;color:var(--caramel);letter-spacing:.24em;text-transform:uppercase}
+.kicker::before{content:"";display:inline-block;width:18px;height:1px;background:var(--caramel);margin-right:10px;vertical-align:middle}
+.eyebrow{font-family:var(--label);letter-spacing:.2em}
+.h1,.h2{font-family:var(--display);color:var(--ink);letter-spacing:-0.01em}
+.h1{font-weight:600;font-optical-sizing:auto}
+.h2{font-weight:600}
+h3,h4{font-family:var(--display);color:var(--ink)}
+.lede{font-family:var(--serif-body);font-size:23px;font-weight:500;color:var(--ink-soft)}
+.dim{color:var(--ink-soft)}
+.dim2{color:var(--ink-faint)}
+.gradient-text{background:linear-gradient(115deg,var(--espresso) 10%,var(--espresso-2) 45%,var(--caramel) 85%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.divider-accent{height:auto!important;width:auto!important;background:none!important;display:flex;align-items:center;justify-content:center;gap:10px}
+.divider-accent::before,.divider-accent::after{content:"";width:48px;height:1px;background:var(--rule-strong)}
+.divider-accent::after{display:none}
+::selection{background:var(--caramel-light);color:var(--espresso)}
+.deck-footer{color:var(--ink-faint);font-family:var(--label);font-size:11px;letter-spacing:.08em}
+.deck-footer .dim2{color:var(--ink-faint)}
+.progress-bar > span{background:linear-gradient(90deg,var(--espresso),var(--caramel))}
+.card{background:linear-gradient(180deg,#fffdf8,#fdf6ea);border:1px solid var(--rule);
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 10px 28px rgba(46,27,18,.08);border-radius:4px;position:relative}
+.card::before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--caramel-light),transparent);opacity:.6}
+.card h4{font-size:19px;margin-bottom:8px}
+.logo-mark{display:block;margin:0 auto 26px;height:128px;width:auto;filter:drop-shadow(0 10px 22px rgba(46,27,18,.18))}
+.logo-mark-sm{display:block;margin:0 auto 16px;height:80px;width:auto;filter:drop-shadow(0 8px 16px rgba(46,27,18,.16))}
+.sec-wrap{position:relative;max-width:880px;margin:0 auto;text-align:center}
+.sec-num{position:absolute;top:-72px;left:50%;transform:translateX(-50%);font-family:var(--display);font-weight:300;
+  font-size:220px;line-height:1;color:var(--caramel);opacity:.13;letter-spacing:-0.04em;z-index:0;pointer-events:none;user-select:none}
+@media (max-width:900px){.sec-num{font-size:130px;top:-40px}}
+.menu-card{background:linear-gradient(180deg,#fffdf8,#fdf6ea);border:1px solid var(--rule);border-radius:4px;
+  box-shadow:0 14px 36px rgba(46,27,18,.10);padding:6px 0;position:relative}
+.menu-card::before{content:"";position:absolute;left:22px;right:22px;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--caramel-light),transparent);opacity:.6}
+.t{width:100%;border-collapse:collapse;font-family:var(--serif-body);font-size:15px}
+.t thead th{font-family:var(--label);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--caramel);font-weight:600;text-align:left;padding:14px 16px 10px;border-bottom:1px solid var(--rule-strong);background:transparent}
+.t td{padding:13px 16px;border-bottom:1px dashed var(--rule);vertical-align:top;color:var(--ink-soft)}
+.t td:first-child{font-family:var(--label);font-size:12px;letter-spacing:.06em;color:var(--ink-faint);white-space:nowrap}
+.t tbody tr:last-child td{border-bottom:none}
+.t tbody tr:hover td{background:rgba(185,128,63,.06)}
+.tag{display:inline-block;font-family:var(--label);font-size:9.5px;font-weight:500;padding:3px 9px;border-radius:3px;
+  background:var(--paper-deep);color:var(--espresso-2);margin-right:4px;letter-spacing:.04em;border:1px solid var(--rule)}
+.todo{max-width:920px;margin-top:18px}
+.todo li{list-style:none;display:flex;align-items:flex-start;gap:16px;padding:14px 6px;border-bottom:1px dashed var(--rule);
+  font-family:var(--serif-body);font-size:16px}
+.todo li:last-child{border-bottom:none}
+.todo li .b{flex-shrink:0;width:21px;height:21px;margin-top:3px;border:1.5px solid var(--caramel);border-radius:50%;position:relative}
+.todo li .t{color:var(--ink-soft);line-height:1.5}
+.todo li .tag{margin-left:auto;background:transparent;border:none;color:var(--ink-faint);font-style:italic;
+  font-family:var(--serif-body);font-size:13px;white-space:nowrap;padding:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}
+.step{position:relative;padding:30px 24px 20px;background:linear-gradient(180deg,#fffdf8,#fdf6ea);
+  border:1px solid var(--rule);border-radius:4px;box-shadow:0 12px 30px rgba(46,27,18,.09)}
+.step .num{position:absolute;top:-22px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--espresso);
+  color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;
+  font-size:19px;box-shadow:0 6px 16px rgba(46,27,18,.28)}
+.step h4{font-size:18px;margin:14px 0 10px;color:var(--ink)}
+.step p{font-size:14px;color:var(--ink-soft);line-height:1.65;margin:0 0 10px;font-family:var(--serif-body)}
+.step p b{color:var(--espresso-2);font-weight:600}
+.step .shot{font-size:12.5px;color:var(--ink-faint);border-top:1px dashed var(--rule);padding-top:10px;margin-top:10px;font-style:italic}
+.rm{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;border:1px solid var(--rule);border-radius:4px;
+  overflow:hidden;background:linear-gradient(180deg,#fffdf8,#fdf6ea);box-shadow:0 12px 30px rgba(46,27,18,.09)}
+.rm .col{padding:18px 18px;border-right:1px dashed var(--rule)}
+.rm .col:last-child{border-right:none}
+.rm .col .tag{display:inline-block;margin-bottom:10px}
+.rm h4{font-size:15px;margin:6px 0 6px;color:var(--ink)}
+.rm ul{padding-left:16px;margin:6px 0 0;font-size:13px;color:var(--ink-soft);font-family:var(--serif-body)}
+.rm li{margin-bottom:5px;line-height:1.5}
+small.cap{font-size:12px;color:var(--ink-faint)}
+.slide h2.h2{margin-bottom:4px}
+.slide .lede{margin-top:4px}
+@keyframes rara-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.rara-in{animation:rara-rise .8s cubic-bezier(.16,1,.3,1) both}
+
+/* ---------- Radius-map diagram (custom to this deck) ---------- */
+.radius-map{position:relative;width:100%;max-width:520px;height:380px;margin:24px auto 0}
+.radius-ring{position:absolute;left:50%;top:62%;border-radius:50%;border:1.5px dashed var(--caramel);
+  transform:translate(-50%,-50%);display:flex;align-items:flex-start;justify-content:center}
+.radius-ring .ring-label{margin-top:6px;font-family:var(--label);font-size:10.5px;letter-spacing:.1em;
+  color:var(--caramel);background:var(--paper);padding:1px 8px;border-radius:99px;border:1px solid var(--rule)}
+.radius-pin{position:absolute;left:50%;top:62%;transform:translate(-50%,-100%);z-index:3;text-align:center}
+.radius-pin .dot{width:14px;height:14px;border-radius:50%;background:var(--espresso);margin:0 auto 6px;
+  box-shadow:0 0 0 6px rgba(60,36,21,.12)}
+.radius-pin .label{font-family:var(--label);font-size:11px;letter-spacing:.08em;color:var(--ink);font-weight:600;white-space:nowrap}
+
+/* ---------- Budget ledger strip ---------- */
+.budget-strip{display:flex;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-top:22px;
+  background:linear-gradient(180deg,#fffdf8,#fdf6ea);box-shadow:0 12px 30px rgba(46,27,18,.09)}
+.budget-strip .cell{flex:1;padding:18px 16px;border-right:1px dashed var(--rule);text-align:center}
+.budget-strip .cell:last-child{border-right:none}
+.budget-strip .cell .big{font-family:var(--display);font-size:30px;font-weight:600;color:var(--ink)}
+.budget-strip .cell .lab{font-family:var(--label);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel);margin-top:4px}
+
+/* ---------- Day-by-day spend bars ---------- */
+.day-bars{display:flex;align-items:flex-end;gap:14px;margin-top:26px;height:140px}
+.day-bars .bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.day-bars .bar .fill{width:100%;max-width:46px;border-radius:3px 3px 0 0;background:linear-gradient(180deg,var(--caramel-light),var(--caramel));
+  box-shadow:0 6px 14px rgba(185,128,63,.3)}
+.day-bars .bar .day-lab{margin-top:8px;font-family:var(--label);font-size:11px;color:var(--ink-faint);letter-spacing:.04em}
+
+/* ---------- Creative mock frame (phone-ish) ---------- */
+.mock-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}
+.mock{background:linear-gradient(180deg,#fffdf8,#fdf6ea);border:1px solid var(--rule);border-radius:6px;
+  box-shadow:0 14px 32px rgba(46,27,18,.10);padding:18px 18px 16px;position:relative}
+.mock .mock-tag{position:absolute;top:-12px;left:16px;background:var(--espresso);color:var(--paper);
+  font-family:var(--label);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.mock h4{font-size:16px;margin:10px 0 8px}
+.mock p{font-size:13.5px;line-height:1.6;color:var(--ink-soft);margin:0 0 6px}
+.mock .frame{aspect-ratio:9/16;max-height:180px;margin:0 auto 12px;border:1px solid var(--rule-strong);border-radius:8px;
+  background:linear-gradient(160deg,var(--paper-deep),var(--paper));display:flex;align-items:center;justify-content:center;
+  font-family:var(--label);font-size:11px;color:var(--ink-faint);letter-spacing:.06em;text-align:center;padding:10px}
+
+@media (max-width: 900px){
+  .slide{padding:36px 22px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .h1{font-size:40px!important;line-height:1.16}
+  .h2{font-size:29px!important}
+  h3{font-size:22px}
+  .lede{font-size:17px;max-width:100%}
+  .kicker{font-size:11px}
+  .logo-mark{height:84px;margin-bottom:16px}
+  .logo-mark-sm{height:56px}
+  .grid.g2,.grid.g3,.grid.g4{grid-template-columns:1fr!important;gap:14px!important}
+  .steps{grid-template-columns:1fr!important;gap:30px!important}
+  .mock-row{grid-template-columns:1fr!important;gap:18px!important}
+  .rm{grid-template-columns:1fr!important}
+  .rm .col{border-right:none!important;border-bottom:1px dashed var(--rule)}
+  .rm .col:last-child{border-bottom:none}
+  .budget-strip{flex-wrap:wrap}
+  .budget-strip .cell{flex:1 1 45%;border-bottom:1px dashed var(--rule)}
+  .t{font-size:13px}
+  .t td,.t th{padding:10px 10px}
+  .menu-card{overflow-x:auto}
+  div[style*="font-size:160px"]{font-size:88px!important}
+  div[style*="font-size:96px"]{font-size:42px!important}
+  div[style*="font-size:120px"]{font-size:56px!important}
+  div[style*="font-size:140px"]{font-size:64px!important}
+  .deck-footer{font-size:11px}
+  .sec-num{font-size:110px}
+  .radius-map{height:300px}
+  .day-bars{gap:8px}
+}
+@media (max-width: 480px){
+  .h1{font-size:32px!important}
+  .h2{font-size:24px!important}
+  .lede{font-size:15px}
+  div[style*="font-size:160px"]{font-size:64px!important}
+  div[style*="font-size:96px"]{font-size:32px!important}
+  .sec-num{font-size:84px}
+  .radius-map{height:260px}
+}
+body.scroll-mode{overflow-y:auto;overflow-x:hidden;scroll-snap-type:y proximity}
+body.scroll-mode .slide{scroll-snap-align:start;border-bottom:1px solid var(--rule)}
+body.scroll-mode .slide:last-child{border-bottom:none}
+</style>
+</head>
+<body data-themes="rara-brand,sunset-warm,soft-pastel,japanese-minimal" data-theme-base="assets/themes/">
+<div class="deck">
+
+  <!-- 1. Cover -->
+  <section class="slide center tc" data-title="Cover">
+    <div class="ring-deco" style="width:520px;height:520px;top:8%;left:-140px"></div>
+    <div class="ring-deco" style="width:320px;height:320px;bottom:6%;right:-80px"></div>
+    <div style="position:relative;z-index:1">
+      <img class="logo-mark anim-fade-down" data-anim="fade-down" src="img/rara-cafe-logo.jpg" alt="RaRa Cafe logo">
+      <p class="kicker anim-fade-down" data-anim="fade-down">RaRa Cafe · Miryalaguda, Telangana</p>
+      <h1 class="h1 anim-fade-up" data-anim="fade-up">Meta Brand Awareness<br><span class="gradient-text">Reach Campaign</span></h1>
+      <p class="lede">A 7-day, ₹700 hyperlocal campaign to put RaRa Cafe in front of every Meta user within reach of the door, on Facebook and Instagram.</p>
+    </div>
+    <div class="deck-footer"><span class="dim2">Meta Ads Manager · Campaign Brief</span><span class="slide-number" data-current="1" data-total="17"></span></div>
+    <div class="notes">Opener. This is an execution brief for one specific campaign, not the full marketing plan.</div>
+  </section>
+
+  <!-- 2. TOC -->
+  <section class="slide" data-title="Agenda">
+    <p class="kicker">What's inside</p>
+    <h2 class="h2">Five things this brief covers</h2>
+    <div class="grid g2 mt-l anim-stagger-list" data-anim-target>
+      <div class="card"><h4>01 · The objective</h4><p class="dim">What "Brand Awareness / Reach" actually optimizes for, and why it fits a local cafe.</p></div>
+      <div class="card"><h4>02 · The radius, precisely</h4><p class="dim">What "1 km" means inside Meta's targeting tools, and the honest constraint to plan around.</p></div>
+      <div class="card"><h4>03 · Budget and schedule</h4><p class="dim">₹100/day × 7 days, mapped to expected reach and frequency.</p></div>
+      <div class="card"><h4>04 · The ad creative</h4><p class="dim">Three creative concepts built for a reach objective, not a sales pitch.</p></div>
+      <div class="card"><h4>05 · Launch requirements</h4><p class="dim">Every account, asset, and access needed before this can go live.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Section divider: Objective -->
+  <section class="slide tc center" data-title="Section 01">
+    <div class="sec-wrap">
+      <span class="sec-num">01</span>
+      <p class="kicker anim-fade-down" data-anim="fade-down" style="justify-content:center;display:flex">Section · 01</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in" style="font-size:88px;position:relative">The <span class="gradient-text">Objective</span></h1>
+      <div class="divider-accent" style="margin:24px auto"></div>
+      <p class="lede" style="margin:0 auto">Why Brand Awareness, not Traffic or Sales, is the right objective for this campaign.</p>
+    </div>
+  </section>
+
+  <!-- 4. Objective explainer -->
+  <section class="slide" data-title="Objective">
+    <p class="kicker">Meta objective: Awareness → Reach</p>
+    <h2 class="h2">What this campaign is actually buying</h2>
+    <p class="lede">Meta's Reach objective optimizes delivery to show the ad to as many unique people as possible inside the target audience, at the lowest cost per person reached. It does not optimize for clicks, page views, or orders. That is the correct choice here: the goal is awareness inside walking/driving distance, not an immediate transaction.</p>
+    <div class="grid g3 mt-l anim-stagger-list" data-anim-target>
+      <div class="card"><h4>Right fit</h4><p class="dim">A new-ish cafe with low local awareness, even within 1 km, awareness is the actual gap, not lack of intent.</p></div>
+      <div class="card"><h4>Right budget size</h4><p class="dim">₹700 total is too small to expect statistically reliable conversion data; reach and frequency are measurable at this spend, sales attribution is not.</p></div>
+      <div class="card"><h4>Right outcome to expect</h4><p class="dim">Success here is "more people nearby now recognize the name and logo," which shows up later as walk-ins, Google searches, and Instagram follows.</p></div>
+    </div>
+    <div class="notes">Set expectations early: this is a name-recognition campaign, not a coupon-redemption campaign. Don't let stakeholders expect a sales report from a reach campaign.</div>
+  </section>
+
+  <!-- 5. Section divider: Radius -->
+  <section class="slide tc center" data-title="Section 02">
+    <div class="sec-wrap">
+      <span class="sec-num">02</span>
+      <p class="kicker anim-fade-down" data-anim="fade-down" style="justify-content:center;display:flex">Section · 02</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in" style="font-size:84px;position:relative">The Radius, <span class="gradient-text">Precisely</span></h1>
+      <div class="divider-accent" style="margin:24px auto"></div>
+      <p class="lede" style="margin:0 auto">What "1 km around the cafe" means once it hits Meta's actual targeting tool.</p>
+    </div>
+  </section>
+
+  <!-- 6. Radius reality check + map -->
+  <section class="slide" data-title="Radius Setup">
+    <p class="kicker">Important constraint, set correctly before launch</p>
+    <h2 class="h2">Meta's smallest radius is 1 mile, not 1 km</h2>
+    <p class="lede">Meta Ads Manager's location-radius targeting has a hard minimum of <b>1 mile (≈1.6 km)</b> around a pin. There is no way to draw a true 1 km circle inside the platform. The honest, precise way to execute "reach people within 1 km" is to set the pin exactly on RaRa Cafe and dial the radius to <b>Meta's minimum, 1 mile</b>, which is the tightest ring available and still keeps roughly two-thirds of its area inside the intended 1 km core.</p>
+    <div class="radius-map">
+      <div class="radius-ring" style="width:300px;height:300px;border-color:var(--rule-strong)">
+        <span class="ring-label">1 mi · Meta minimum</span>
+      </div>
+      <div class="radius-ring" style="width:188px;height:188px;border-color:var(--caramel)">
+        <span class="ring-label" style="background:var(--caramel);color:var(--paper);border-color:var(--caramel)">1 km · intended core</span>
+      </div>
+      <div class="radius-pin">
+        <div class="dot"></div>
+        <div class="label">RaRa Cafe, Hanumanpet</div>
+      </div>
+    </div>
+    <p class="dim" style="text-align:center;margin-top:18px;max-width:640px;margin-left:auto;margin-right:auto;font-size:14px">The 1 km intent sits inside the 1-mile minimum ring. Address-level precision plus tight age/interest layering keeps delivery honest to the original intent even though the radius itself can't be drawn smaller.</p>
+    <div class="notes">Don't let anyone promise a literal 1km radius in the ad platform, that promise can't be kept exactly. Be upfront about the 1-mile minimum so expectations match what Meta can actually deliver.</div>
+  </section>
+
+  <!-- 7. Audience targeting setup -->
+  <section class="slide" data-title="Targeting Setup">
+    <p class="kicker">Meta Ads Manager · Ad set targeting</p>
+    <h2 class="h2">The exact targeting configuration</h2>
+    <div class="grid g4 mt-l anim-stagger-list" data-anim-target>
+      <div class="card"><p class="eyebrow">Location pin</p><div style="font-size:30px;font-weight:600;font-family:var(--display)">Hanumanpet</div><p class="dim">Drop pin on RaRa Cafe's exact address, Miryalaguda 508207</p></div>
+      <div class="card"><p class="eyebrow">Radius</p><div style="font-size:30px;font-weight:600;font-family:var(--display)">1 mi</div><p class="dim">Platform minimum; tightest ring available, covers the 1 km core</p></div>
+      <div class="card"><p class="eyebrow">Age range</p><div style="font-size:30px;font-weight:600;font-family:var(--display)">18–45</div><p class="dim">Café/casual-dining demographic; widen later if reach is too small</p></div>
+      <div class="card"><p class="eyebrow">Languages</p><div style="font-size:30px;font-weight:600;font-family:var(--display)">EN + TE</div><p class="dim">English and Telugu, matching how locals actually browse</p></div>
+    </div>
+    <div class="rm">
+      <div class="col now">
+        <span class="tag">DETAILED TARGETING</span>
+        <h4>Interest layers (OR logic)</h4>
+        <ul><li>Coffee / Cafés</li><li>Restaurants / Foodies</li><li>Casual dining</li><li>Live music / Stand-up comedy (catches event-night audience too)</li></ul>
+      </div>
+      <div class="col">
+        <span class="tag">PLACEMENTS</span>
+        <h4>Where it shows up</h4>
+        <ul><li>Instagram Feed + Stories + Reels</li><li>Facebook Feed + Stories</li><li>Advantage+ placements ON, lets Meta find the cheapest reach inside the radius</li></ul>
+      </div>
+      <div class="col">
+        <span class="tag">DELIVERY</span>
+        <h4>Optimization &amp; pacing</h4>
+        <ul><li>Objective: Awareness → Reach</li><li>Buying type: Auction</li><li>Pacing: Standard (not accelerated), so ₹100/day spreads evenly across the day</li></ul>
+      </div>
+      <div class="col">
+        <span class="tag">FREQUENCY</span>
+        <h4>Frequency cap</h4>
+        <ul><li>Reach objective supports a frequency cap directly</li><li>Cap at 2 impressions / 7 days per person</li><li>Keeps the small audience from feeling spammed</li></ul>
+      </div>
+    </div>
+    <div class="notes">A 1-mile radius around a small town like Miryalaguda may still return a small audience. If Ads Manager flags the audience as too narrow to deliver the full ₹700, widen age range before widening radius, the radius is the one variable that must stay tight.</div>
+  </section>
+
+  <!-- 8. Section divider: Budget -->
+  <section class="slide tc center" data-title="Section 03">
+    <div class="sec-wrap">
+      <span class="sec-num">03</span>
+      <p class="kicker anim-fade-down" data-anim="fade-down" style="justify-content:center;display:flex">Section · 03</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in" style="font-size:88px;position:relative">Budget &amp; <span class="gradient-text">Schedule</span></h1>
+      <div class="divider-accent" style="margin:24px auto"></div>
+      <p class="lede" style="margin:0 auto">₹100/day for 7 straight days, spent evenly, not front-loaded.</p>
+    </div>
+  </section>
+
+  <!-- 9. Budget breakdown -->
+  <section class="slide" data-title="Budget Breakdown">
+    <p class="kicker">Daily budget · standard pacing</p>
+    <h2 class="h2">₹700 across 7 days, day by day</h2>
+    <div class="budget-strip">
+      <div class="cell"><div class="big">₹100</div><div class="lab">Daily budget</div></div>
+      <div class="cell"><div class="big">7 days</div><div class="lab">Duration</div></div>
+      <div class="cell"><div class="big">₹700</div><div class="lab">Total spend</div></div>
+      <div class="cell"><div class="big">≤2×</div><div class="lab">Frequency cap / person</div></div>
+    </div>
+    <div class="day-bars">
+      <div class="bar"><div class="fill" style="height:88%"></div><div class="day-lab">Day 1</div></div>
+      <div class="bar"><div class="fill" style="height:100%"></div><div class="day-lab">Day 2</div></div>
+      <div class="bar"><div class="fill" style="height:100%"></div><div class="day-lab">Day 3</div></div>
+      <div class="bar"><div class="fill" style="height:96%"></div><div class="day-lab">Day 4</div></div>
+      <div class="bar"><div class="fill" style="height:100%"></div><div class="day-lab">Day 5</div></div>
+      <div class="bar"><div class="fill" style="height:92%"></div><div class="day-lab">Day 6</div></div>
+      <div class="bar"><div class="fill" style="height:78%"></div><div class="day-lab">Day 7</div></div>
+    </div>
+    <p class="dim" style="text-align:center;margin-top:14px;font-size:14px">Day 1 and Day 7 typically under-spend slightly while the algorithm calibrates and as the frequency cap throttles repeat impressions late in the run, this is normal and not a setup error.</p>
+    <div class="notes">Do not edit budget or targeting mid-run, every edit resets the learning phase. Let all 7 days run untouched, then review.</div>
+  </section>
+
+  <!-- 10. Section divider: Creative -->
+  <section class="slide tc center" data-title="Section 04">
+    <div class="sec-wrap">
+      <span class="sec-num">04</span>
+      <p class="kicker anim-fade-down" data-anim="fade-down" style="justify-content:center;display:flex">Section · 04</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in" style="font-size:88px;position:relative">The Ad <span class="gradient-text">Creative</span></h1>
+      <div class="divider-accent" style="margin:24px auto"></div>
+      <p class="lede" style="margin:0 auto">Built for recognition, not conversion: face, name, place, vibe.</p>
+    </div>
+  </section>
+
+  <!-- 11. Creative direction -->
+  <section class="slide" data-title="Creative Direction">
+    <p class="kicker">Creative brief for a reach objective</p>
+    <h2 class="h2">What the ad needs to do in under 3 seconds</h2>
+    <p class="lede">A reach ad's only job is to be instantly recognizable and memorable. No price, no hard sell, no fine print, just the name, the logo, the vibe, and the address sticking in someone's head the next time they're deciding where to get coffee.</p>
+    <div class="mock-row">
+      <div class="mock">
+        <span class="mock-tag">Concept A</span>
+        <div class="frame">Logo centered on warm interior shot,<br>"RaRa Cafe" + tagline overlay</div>
+        <h4>The Signature Shot</h4>
+        <p>Single static image: the actual storefront/interior at golden hour, logo overlaid bottom-third, "Escape the Rush" tagline, "Hanumanpet, Miryalaguda" as a location stamp.</p>
+        <p class="dim" style="font-size:12.5px">Best for: Feed + Stories, lowest production effort, highest repeat-recognition value.</p>
+      </div>
+      <div class="mock">
+        <span class="mock-tag">Concept B</span>
+        <div class="frame">5–8s loop: coffee pour → steam →<br>logo stamp end-card</div>
+        <h4>The Pour Loop</h4>
+        <p>Short looping video (reuse Reel Script A footage if available): coffee being poured, steam rising, cut to logo end-card with address. Motion outperforms static in Stories/Reels placements.</p>
+        <p class="dim" style="font-size:12.5px">Best for: Reels + Stories, higher recall per impression than a static image.</p>
+      </div>
+      <div class="mock">
+        <span class="mock-tag">Concept C</span>
+        <div class="frame">Carousel: dish → drink → seating →<br>logo card</div>
+        <h4>The Welcome Card</h4>
+        <p>3-card carousel: best dish, signature drink, seating area, each card plain and uncluttered, last card is pure brand: logo, address, "Open daily 11am–10pm."</p>
+        <p class="dim" style="font-size:12.5px">Best for: Feed, gives the algorithm 3 creative variants to test within one ad.</p>
+      </div>
+    </div>
+    <div class="notes">Run all three as separate ads in the same ad set so Meta's delivery system can find which one earns cheaper reach, that's the only "testing" this budget size can support.</div>
+  </section>
+
+  <!-- 12. Ad copy and content -->
+  <section class="slide" data-title="Ad Copy">
+    <p class="kicker">Primary text, headline, and CTA for each concept</p>
+    <h2 class="h2">What the ad actually says</h2>
+    <div class="menu-card mt-l" style="padding:4px 12px">
+    <table class="t">
+      <thead><tr><th>Concept</th><th>Primary text</th><th>Headline</th><th>CTA button</th></tr></thead>
+      <tbody>
+        <tr><td>A · Signature Shot</td><td>"Right around the corner in Hanumanpet. Good vibes, better coffee. RaRa Cafe, Miryalaguda."</td><td>Escape the Rush, Just Down the Road</td><td>Get Directions</td></tr>
+        <tr><td>B · The Pour Loop</td><td>"Your new regular spot is closer than you think. Open daily, 11am–10pm."</td><td>RaRa Cafe Is Open, Nearby</td><td>Get Directions</td></tr>
+        <tr><td>C · Welcome Card</td><td>"Food, coffee, and a place to slow down, all within walking distance. RaRa Cafe, Hanumanpet."</td><td>Your Neighborhood Cafe</td><td>Learn More</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="dim" style="margin-top:16px;font-size:14px">"Get Directions" outperforms "Order Now" or "Shop Now" for a hyperlocal reach campaign, it matches the actual next action: walking or driving over.</p>
+    <div class="notes">Keep primary text under 125 characters where possible so it doesn't truncate on Instagram Stories/Reels placements.</div>
+  </section>
+
+  <!-- 13. Section divider: Launch -->
+  <section class="slide tc center" data-title="Section 05">
+    <div class="sec-wrap">
+      <span class="sec-num">05</span>
+      <p class="kicker anim-fade-down" data-anim="fade-down" style="justify-content:center;display:flex">Section · 05</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in" style="font-size:88px;position:relative">Launch <span class="gradient-text">Requirements</span></h1>
+      <div class="divider-accent" style="margin:24px auto"></div>
+      <p class="lede" style="margin:0 auto">Every account, asset, and access needed before this can go live.</p>
+    </div>
+  </section>
+
+  <!-- 14. Requirements checklist -->
+  <section class="slide" data-title="Launch Checklist">
+    <p class="kicker">Get all of this in place before building the campaign</p>
+    <h2 class="h2">Accounts, access, and assets needed</h2>
+    <ul class="todo anim-stagger-list" data-anim-target>
+      <li><span class="b"></span><span class="t">Meta Business Suite account set up for RaRa Cafe (business.facebook.com), with admin access</span><span class="tag">accounts</span></li>
+      <li><span class="b"></span><span class="t">RaRa Cafe's Facebook Page connected inside Business Suite (create one if it doesn't exist yet)</span><span class="tag">accounts</span></li>
+      <li><span class="b"></span><span class="t">@rara_cafes Instagram account linked to the Facebook Page, so ads can run as the Instagram profile</span><span class="tag">accounts</span></li>
+      <li><span class="b"></span><span class="t">Ad account created inside Business Suite, with billing currency set to INR</span><span class="tag">accounts</span></li>
+      <li><span class="b"></span><span class="t">Payment method added: debit/credit card or UPI-linked payment threshold set up</span><span class="tag">billing</span></li>
+      <li><span class="b"></span><span class="t">Admin/advertiser access granted on the ad account to whoever is building and managing the campaign</span><span class="tag">access</span></li>
+      <li><span class="b"></span><span class="t">Exact cafe address and Google Maps pin confirmed for accurate radius placement</span><span class="tag">assets</span></li>
+      <li><span class="b"></span><span class="t">3–5 high-resolution photos/short clips for the chosen creative concept (interior, dish, drink, signature pour)</span><span class="tag">assets</span></li>
+      <li><span class="b"></span><span class="t">Final logo file (transparent background, high-res) for end-card/overlay use</span><span class="tag">assets</span></li>
+      <li><span class="b"></span><span class="t">Ad copy and CTA finalized from the options on the previous slide</span><span class="tag">content</span></li>
+      <li><span class="b"></span><span class="t">Special Ad Category check: confirm this campaign doesn't fall under housing/credit/employment/politics (it doesn't, but Meta requires the declaration)</span><span class="tag">compliance</span></li>
+    </ul>
+    <div class="notes">None of this needs a website or a pixel, this campaign type runs entirely on Page/Instagram assets and doesn't require conversion tracking infrastructure.</div>
+  </section>
+
+  <!-- 15. What to measure -->
+  <section class="slide" data-title="Measurement">
+    <p class="kicker">After the 7 days, in Ads Manager → Results</p>
+    <h2 class="h2">What "working" looks like for this campaign</h2>
+    <div class="grid g3 mt-l anim-stagger-list" data-anim-target>
+      <div class="card"><h4>Reach</h4><p class="dim">Target: as close to the full local audience size as ₹700 allows. This is the headline number, not clicks or sales.</p></div>
+      <div class="card"><h4>Frequency</h4><p class="dim">Should land near the 2.0 cap. Far below it means the audience was too broad; far above means delivery throttled hard.</p></div>
+      <div class="card"><h4>CPM (cost per 1,000 impressions)</h4><p class="dim">The efficiency signal. A high CPM in a 1-mile radius usually means the age range needs widening, not the radius.</p></div>
+    </div>
+    <p class="dim" style="margin-top:18px;font-size:14px">Do not judge this campaign on Google reviews, walk-ins, or Instagram followers gained in 7 days, those lag indicators take weeks to show up and are also affected by everything else happening at the cafe. Judge it only on reach, frequency, and CPM.</p>
+    <div class="notes">Set this expectation before launch so a "successful" reach campaign isn't mistaken for a failure just because the till didn't visibly change in a week.</div>
+  </section>
+
+  <!-- 16. CTA -->
+  <section class="slide center tc" data-title="CTA">
+    <div>
+      <p class="kicker">Ready to launch, in this order</p>
+      <h1 class="h1 anim-rise-in" data-anim="rise-in">Set up access.<br><span class="gradient-text">Then build, then launch.</span></h1>
+      <p class="lede" style="margin:16px auto">Business Suite + ad account + payment method → upload creative → set targeting exactly as specified → launch for 7 days untouched → review reach, frequency, and CPM.</p>
+    </div>
+  </section>
+
+  <!-- 17. Thanks -->
+  <section class="slide center tc" data-title="Thanks">
+    <img class="logo-mark-sm" src="img/rara-cafe-logo.jpg" alt="RaRa Cafe logo">
+    <h1 class="h1" style="font-size:104px;line-height:1"><span class="gradient-text">Ready to go live.</span></h1>
+    <p class="lede">RaRa Cafe · Hanumanpet, Miryalaguda · Escape the Rush</p>
+  </section>
+
+</div>
+<script src="assets/runtime.js"></script>
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!='loading')fn(); else document.addEventListener('DOMContentLoaded',fn); }
+  ready(function(){
+    document.body.classList.add('scroll-mode');
+    var deckEl = document.querySelector('.deck');
+    var slides = Array.from(document.querySelectorAll('.deck .slide'));
+    if (!slides.length) return;
+
+    document.documentElement.style.height = 'auto';
+    document.documentElement.style.overflow = 'visible';
+    document.body.style.height = 'auto';
+    document.body.style.overflow = 'visible';
+    document.body.style.margin = '0';
+    if (deckEl) {
+      deckEl.style.position = 'static';
+      deckEl.style.height = 'auto';
+      deckEl.style.overflow = 'visible';
+      deckEl.style.width = '100%';
+      deckEl.style.display = 'block';
+    }
+    slides.forEach(function(s){
+      s.style.position = 'relative';
+      s.style.inset = 'auto';
+      s.style.top = 'auto';
+      s.style.left = 'auto';
+      s.style.right = 'auto';
+      s.style.bottom = 'auto';
+      s.style.transform = 'none';
+      s.style.opacity = '1';
+      s.style.pointerEvents = 'auto';
+      s.style.minHeight = '100vh';
+      s.style.boxSizing = 'border-box';
+      s.style.margin = '0';
+      s.querySelectorAll('[data-anim], [class*="anim-"]').forEach(function(el){
+        el.style.animation = 'none';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.filter = 'none';
+      });
+    });
+
+    var isSyncingFromHash = false;
+    var snapTimer = null;
+
+    function currentIndexFromScroll(){
+      var mid = window.scrollY + window.innerHeight/2;
+      var best = 0, bestDist = Infinity;
+      slides.forEach(function(s, i){
+        var rect = s.getBoundingClientRect();
+        var top = rect.top + window.scrollY;
+        var center = top + rect.height/2;
+        var dist = Math.abs(center - mid);
+        if (dist < bestDist) { bestDist = dist; best = i; }
+      });
+      return best;
+    }
+
+    function syncHashToIndex(i){
+      var target = '#/' + (i+1);
+      if (location.hash !== target) history.replaceState(null,'',target);
+      var numEl = document.querySelector('.slide-number');
+      if (numEl) numEl.setAttribute('data-current', i+1);
+      slides.forEach(function(s,j){ s.classList.toggle('is-active', j===i); });
+    }
+
+    window.addEventListener('scroll', function(){
+      if (isSyncingFromHash) return;
+      clearTimeout(snapTimer);
+      snapTimer = setTimeout(function(){
+        syncHashToIndex(currentIndexFromScroll());
+      }, 120);
+    }, { passive: true });
+
+    function scrollToIndex(i){
+      var s = slides[i];
+      if (!s) return;
+      isSyncingFromHash = true;
+      s.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(function(){ isSyncingFromHash = false; }, 400);
+    }
+
+    window.addEventListener('hashchange', function(){
+      var m = /^#\/(\d+)/.exec(location.hash||'');
+      if (m) scrollToIndex(Math.max(0, parseInt(m[1],10)-1));
+    });
+
+    var m0 = /^#\/(\d+)/.exec(location.hash||'');
+    if (m0) {
+      var idx0 = Math.max(0, parseInt(m0[1],10)-1);
+      requestAnimationFrame(function(){ scrollToIndex(idx0); });
+    }
+  });
+})();
+</script>
+</body></html>
